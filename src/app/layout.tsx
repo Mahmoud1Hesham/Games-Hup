@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` antialiased relative px-24` }
+        className={`antialiased relative` }
       >
         <header>
           <Image src={bgc} alt="background" className="w-full h-[30vh] object-cover"/>
