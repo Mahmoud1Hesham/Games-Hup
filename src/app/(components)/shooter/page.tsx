@@ -32,7 +32,7 @@ export default function Shooter() {
 
     return <>
 
-        <div className="container px-3 py-12 grid grid-cols-4 gap-x-5 gap-y-5">
+        <div className="container px-3 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-5 gap-y-5">
             {!isLoading ? gamesData.map((game: Card) => (
                 <div key={game.id} className="card bg-transparent grayscale-[70%] hover:grayscale-0 hover:scale-105 transition-all duration-500 ease-in-out border border-gray-900 rounded-lg flex flex-col justify-between">
                     <Link href={`/${game.id}`}>
