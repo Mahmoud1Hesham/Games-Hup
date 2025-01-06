@@ -50,7 +50,7 @@ const router = useRouter();
         if (id) {
             fetchGameDetails();
         }
-    }, [id]);
+    }, [fetchGameDetails()]);
 
     return (
         <div>

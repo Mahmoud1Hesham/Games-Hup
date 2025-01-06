@@ -2,7 +2,6 @@
 import Loader from '@/app/_components/loader/page'
 import Image from 'next/image'
 import Link from 'next/link'
-// import { useRouter } from 'next/navigation'
 import React, { useState, useEffect } from 'react'
 
 export type Card = {
