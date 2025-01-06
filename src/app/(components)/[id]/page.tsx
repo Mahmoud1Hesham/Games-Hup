@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function GameDetails() {
     type GameDetails = {
         title: string;
-        thumbnail: unknown;
+        thumbnail: any;
         genre: string;
         platform: string;
         status: string;
@@ -17,7 +17,7 @@ export default function GameDetails() {
         developer: string;
         release_date: string;
         description: string;
-        game_url: unknown;
+        game_url: any;
     };
     const [isLoading, setIsLoading] = useState(true);
     const [gamesData, setGamesData] = useState<GameDetails | null>(null);
