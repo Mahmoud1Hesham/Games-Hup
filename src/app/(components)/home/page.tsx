@@ -7,7 +7,7 @@ import React, { useState, useEffect } from 'react'
 
 export type Card = {
     id: number,
-    thumbnail: any,
+    thumbnail: unknown,
     title: string,
     short_description: string,
     genre: string,
@@ -17,18 +17,18 @@ export type Card = {
 export default function HomePage() {
     const [isLoading, setIsLoading] = useState(true);
     const [gamesData, setGamesData] = useState<Card[]>([]);
-    let router = useRouter()
+    // let router = useRouter()
 
     useEffect(() => {
         async function fetchGames() {
             try {
-                let res = await fetch(`https://free-to-play-games-database.p.rapidapi.com/api/games`, {
+                const res = await fetch(`https://free-to-play-games-database.p.rapidapi.com/api/games`, {
                     headers: {
                         "x-rapidapi-key": "e4eb259338mshaf586460bdd4d5ap1c8f66jsn0517ceccdf9d",
                         "x-rapidapi-host": "free-to-play-games-database.p.rapidapi.com"
                     }
                 });
-                let data = await res.json();
+                const data = await res.json();
                 setGamesData(data);
             } catch (error) {
                 console.error('Error fetching games:', error);

@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function GameDetails() {
     type GameDetails = {
         title: string;
-        thumbnail: any;
+        thumbnail: unknown;
         genre: string;
         platform: string;
         status: string;
@@ -17,13 +17,13 @@ export default function GameDetails() {
         developer: string;
         release_date: string;
         description: string;
-        game_url: any;
+        game_url: unknown;
     };
     const [isLoading, setIsLoading] = useState(true);
     const [gamesData, setGamesData] = useState<GameDetails | null>(null);
 
     const { id } = useParams();
-let router = useRouter();
+const router = useRouter();
     const fetchGameDetails = async () => {
         try {
             const res = await fetch(
@@ -57,7 +57,7 @@ let router = useRouter();
             {isLoading ? (
                 <Loader />
             ) : (
-                <article className="container flex flex-col absolute top-0 bg-[#272b30] z-[55] h-[100vh]">
+                <article className="container flex flex-col absolute inset-0 w-[100vw] bg-[#272b30] z-[55] h-[100vh]">
                     <header className="flex justify-between text-2xl w-full pt-5 px-6">
                         <h1 className="text-3xl">Game Details </h1>
                         <button className="icon focus:border-4 focus:border-gray-500 focus:rounded-lg " onClick={()=> router.back()}>

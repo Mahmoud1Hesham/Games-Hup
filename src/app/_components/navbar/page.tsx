@@ -8,8 +8,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 export default function Navbar() {
-  let [isOpen, setIsOpen] = useState(false);
-  let path = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
+  const path = usePathname();
 
   function toggleNavbar() {
     setIsOpen(!isOpen);

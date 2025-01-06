@@ -12,13 +12,13 @@ export default function Pixel() {
     useEffect(() => {
         async function fetchPixel() {
             try {
-                let res = await fetch(`https://free-to-play-games-database.p.rapidapi.com/api/games?category=pixel`, {
+                const res = await fetch(`https://free-to-play-games-database.p.rapidapi.com/api/games?category=pixel`, {
                     headers: {
                         "x-rapidapi-key": "e4eb259338mshaf586460bdd4d5ap1c8f66jsn0517ceccdf9d",
                         "x-rapidapi-host": "free-to-play-games-database.p.rapidapi.com"
                     }
                 });
-                let data = await res.json();
+                const data = await res.json();
                 setGamesData(data);
             } catch (error) {
                 console.error('Error fetching games:', error);
