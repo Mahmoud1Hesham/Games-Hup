@@ -7,8 +7,14 @@ import TopBtn from "./_components/topbtn/page";
 export const metadata: Metadata = {
   title: "Games Hup",
   description: "Welcome to a free online games hup!",
-//   icons: <link rel="icon" href="import logo from '../../assets/logo-sm.png'
-// "></link>
+  openGraph: {
+    title: "Games Hup",
+    description: "Discover a collection of free online games!",
+    url: "https://your-deployed-site.vercel.app",
+    siteName: "Games Hup",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
