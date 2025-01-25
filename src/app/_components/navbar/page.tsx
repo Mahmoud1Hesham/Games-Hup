@@ -18,7 +18,7 @@ export default function Navbar() {
   return (
     <>
     <nav className={`w-full sticky top-2 z-40  md:flex md:justify-between items-center  transition-all duration-500 ease-in-out`}>
-<div className="flex justify-between items-center w-[90%] bg-[#3a497b] rounded-2xl px-6 py-3 mx-auto">
+<div className="flex flex-col justify-between items-center w-[90%] bg-[#3a497b] rounded-2xl px-6 py-3 mx-auto">
 <div className="flex justify-between items-center w-full md:w-auto">
     <Image src={logo} alt='logo' className='max-w-10' />
     <button
